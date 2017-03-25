@@ -49,8 +49,6 @@ def main():
    maxWidth = 1000
    maxHeight = 100
    rects = genRects(10,50,50)
-   #print(genFill())
-   #styles = ["fill:rgb(140,0,0)","fill:rgb(0,140,0)"]
    styles = genFill()
    rectstyles = applyStyles(rects, styles)
    writeFile("mycolors.svg", svgImage(maxWidth, maxHeight, rectstyles))
