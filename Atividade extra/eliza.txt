@@ -1,0 +1,49 @@
+1) Baixe o SWI Prolog          
+2) Baixe esse programa aqui: http://cs.nyu.edu/courses/fall11/CSCI-GA.2110-003/documents/eliza.pl
+O programa é um Eliza chatbot em Prolog, que emula um terapeuta/psicanalista :-)
+
+E agora, a parte mais divertida!
+3) Descubra como executar o programa.
+4) Converse com a Eliza (atenção, ela só fala inglês!) e salve seu bate-papo.
+5) Olhe o código e indique pelo menos 2 partes que você entendeu (se puxe aí pra merecer seus pontinhos!).
+
+
+1 - ok
+2 - ok
+3 - ok = swipl eliza.pl
+4 - ok 
+Hello. I am ELIZA. How can I help you?
+> how old are you? 
+
+Why do you ask?
+> just curiosity
+
+I am not sure I understand you fully.
+> sorry
+
+Please do not apologize.
+> sorry
+
+Apologies are not necessary.
+> sorry
+
+What feelings do you have when you apologize?
+> tranquility
+
+Please go on.
+> why?
+
+What does that suggest to you?
+> quit
+
+> Goodbye. My secretary will send you a bill.
+
+5 - 
+
+Ela tem frases prédefinidas com base no que o usuario digitou. Como pro exemplo no dialogo acima
+digitei "sorry" e veio uma resposta, digitei sorry novamente e veio outra, então tem uma lista de respostas que avançando, pra nao ser sempre a mesma resposta padrão.
+Quando não é digitada nenhuma palavra 'chave' ela te faz digitar mais e utiliza frases como 'Please go on' e 'What does that suggest to you?'
+As palavras chave tem um peso, então se tu usar mais de uma na mesma frase, ela vai formular uma resposta em cima da maior.
+A palavra Quit tem o maior peso, não importa o que você escrever junto, a palavra quit estiver no meio da frase ela vai se despedir com
+Goodbye. My secretary will send you a bill.
+e sair do programa.
