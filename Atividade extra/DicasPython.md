@@ -125,3 +125,4 @@ print sorted(colors, cmp=compare_length)
 ```python
 print sorted(colors, key=len)
 ```
+O original é lento e desagradável para escrever. Além disso, as funções de comparação não estão mais disponíveis no python 3.
