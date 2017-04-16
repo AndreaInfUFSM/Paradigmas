@@ -37,7 +37,7 @@ for i in range(len(colors)):
 for color in colors:
     print color
 ```
-## Looping para trás
+## Loop para trás
 
 ```python
 colors = ['red', 'green', 'blue', 'yellow']
