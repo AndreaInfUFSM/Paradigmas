@@ -22,3 +22,51 @@ for i in xrange(6):
 ```
 
 `Xrange` cria um iterador sobre o intervalo produzindo os valores um de cada vez.É muito mais eficiente em termos de memória do que `range`. `Xrange` foi renomeado para`range` em python 3.
+
+## Loop em uma collection
+```python
+colors = ['red', 'green', 'blue', 'yellow']
+
+for i in range(len(colors)):
+    print colors[i]
+```
+
+### Melhor
+
+```python
+for color in colors:
+    print color
+```
+## Looping para trás
+
+```python
+colors = ['red', 'green', 'blue', 'yellow']
+
+for i in range(len(colors)-1, -1, -1):
+    print colors[i]
+```
+
+### Melhor
+
+```python
+for color in reversed(colors):
+    print color
+    
+## Loop em uma collection e indices
+
+```python
+colors = ['red', 'green', 'blue', 'yellow']
+
+for i in range(len(colors)):
+    print i, '--->', colors[i]
+```
+
+### Melhor
+
+```python
+for i, color in enumerate(colors):
+    print i, '--->', color
+```
+É rápido e bonito e nos evita de seguir os índices individuais e de os incrementar.
+Sempre que você estiver manipulando índices [em uma coleção], você provavelmente está fazendo errado.
+ 
