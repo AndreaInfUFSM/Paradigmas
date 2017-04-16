@@ -70,3 +70,58 @@ for i, color in enumerate(colors):
 É rápido e bonito e nos evita de seguir os índices individuais e de os incrementar.
 Sempre que você estiver manipulando índices [em uma coleção], você provavelmente está fazendo errado.
  
+## Loop sobre duas collections
+
+```python
+names = ['raymond', 'rachel', 'matthew']
+colors = ['red', 'green', 'blue', 'yellow']
+
+n = min(len(names), len(colors))
+for i in range(n):
+    print names[i], '--->', colors[i]
+
+for name, color in zip(names, colors):
+    print name, '--->', color
+```
+
+### Melhor
+
+```python
+for name, color in izip(names, colors):
+    print name, '--->', color
+```
+
+`zip`Cria uma nova lista na memória e ocupada mais memória. `izip` é mais eficiente que`zip`.
+Nota: No python 3 `izip` foi renomeada para`zip` e foi promovida uma built in substuindo o velho`zip`.
+
+## Loop em ordem ordenada
+
+```python
+colors = ['red', 'green', 'blue', 'yellow']
+
+# Ordem "frente para trás"
+for color in sorted(colors):
+    print colors
+
+# Ordem "trás para frente"
+for color in sorted(colors, reverse=True):
+    print colors
+```
+## Ordem Personalizada
+
+```python
+colors = ['red', 'green', 'blue', 'yellow']
+
+def compare_length(c1, c2):
+    if len(c1) < len(c2): return -1
+    if len(c1) > len(c2): return 1
+    return 0
+
+print sorted(colors, cmp=compare_length)
+```
+
+### Melhor
+
+```python
+print sorted(colors, key=len)
+```
