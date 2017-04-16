@@ -51,7 +51,7 @@ for i in range(len(colors)-1, -1, -1):
 ```python
 for color in reversed(colors):
     print color
-    
+```  
 ## Loop em uma collection e indices
 
 ```python
