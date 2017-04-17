@@ -118,3 +118,12 @@ print (sorted(colors, key=len))
 O original é lento e desagradável para escrever. Além disso, as funções de comparação não estão mais disponíveis no python 3.
 
 
+## Construindo um dictionary em pares
+
+```python
+names = ['raymond', 'rachel', 'matthew']
+colors = ['red', 'green', 'blue']
+
+d = dict(zip(names, colors))
+# {'matthew': 'blue', 'rachel': 'green', 'raymond': 'red'}
+```
