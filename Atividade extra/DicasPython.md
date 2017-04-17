@@ -1,6 +1,6 @@
 
-Créditos a Raymonf Hettinger's, palestra de pycon 2013,  [video](http://www.youtube.com/watch?feature=player_embedded&v=OSGv2VnC0go)
-
+Créditos a Raymonf Hettinger's, palestra na pycon 2013,  [video](http://www.youtube.com/watch?feature=player_embedded&v=OSGv2VnC0go)
+Gostaria de indicar também outro [video](https://www.youtube.com/watch?v=wf-BqAjZb8M) que eu gostei muito, de Raymonf Hettinger's, palestra na pycon 2015, com o tema PEPs (Index of Python Enhancement Proposals) ou em Portuguẽs (Índice de Propostas de Aperfeiçoamento em Python), onde ele da exemplos de boas práticas em python.
 Os exemplos de código e as citações diretas são todas da conversa de Raymond.
 Eu estou traduzindo aqui para estudar e na esperança de que outros achem tão útil como eu achei
 
