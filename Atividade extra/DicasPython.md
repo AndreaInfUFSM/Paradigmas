@@ -127,3 +127,23 @@ colors = ['red', 'green', 'blue']
 d = dict(zip(names, colors))
 # {'matthew': 'blue', 'rachel': 'green', 'raymond': 'red'}
 ```
+
+## Melhorando a clareza
+ * Argumentos posicionais e indicies são boas escolhas
+ * Palavras-chave e nomes são melhores
+ * A primeira maneira é conveniente para o computador
+ * O segundo corresponde à forma como os humanos pensam
+
+## Chamadas de função com argumentos de palavra-chave
+
+```python
+twitter_search('@obama', False, 20, True)
+```
+
+### Better
+
+```python
+twitter_search('@obama', retweets=False, numtweets=20, popular=True)
+```
+É ligeiramente (microssegundos) mais lento, mas vale a pena para a clareza de código e economia de tempo do desenvolvedor.
+
