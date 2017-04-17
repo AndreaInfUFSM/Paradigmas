@@ -1,4 +1,4 @@
-Créditos ao site [python help](https://pythonhelp.wordpress.com) de onde tirei o conteúdo para meu estudo e estou disponibilizando aqui para que outras pessoas possam usufruir tanto quanto eu.
+Créditos aos sites [python help](https://pythonhelp.wordpress.com) e [docs python org](https://docs.python.org/3/) de onde tirei os conteúdos para meu estudo e estou disponibilizando aqui para que outras pessoas possam usufruir tanto quanto eu.
 
 
 
@@ -120,3 +120,41 @@ list(range(0, 30, 3))
 ```
 Definimos uma segunda sequência numérica no intervalo de 0 à 30 e o step igual a 3.
 
+### List Comprehensions
+
+As List Comprehensions fornecem uma maneira concisa de criar listas. As aplicações comuns são fazer listas novas onde cada elemento é o resultado de algumas operações aplicadas a cada elemento de uma outra seqüência ou iteravel, ou ainda criar uma subsequencia daqueles elementos que satisfazem uma determinada condição.
+
+Exemplo, suponha que queremos criar uma lista de quadrados, como:
+```python
+squares = []
+for x in range(10):
+     squares.append(x**2)
+
+squares()
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+```
+Observe que isso cria (ou substitui) uma variável chamada x que ainda existe após a conclusão do loop. Podemos calcular a lista de quadrados sem quaisquer efeitos colaterais usando:
+```python
+squares = list(map(lambda x: x**2, range(10)))
+```
+ou, com o mesmo resultado:
+```python
+squares = [x**2 for x in range(10)]
+```
+A List Comprehension consiste em colchetes que contêm uma expressão seguida por uma cláusula for, então zero ou mais for ou ifs. O resultado será uma nova lista resultante da avaliação da expressão no contexto das cláusulas for e if que a seguem. Por exemplo, este listcomp combina os elementos de duas listas se não forem iguais:
+```python
+[(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]
+[(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]
+```
+e é equivalente a:
+```python
+combs = []
+for x in [1,2,3]:
+     for y in [3,1,4]:
+         if x != y:
+             combs.append((x, y))
+combs()
+[(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]
+```
+
+Observe como a ordem das instruções for e if é a mesma em ambos trechos
