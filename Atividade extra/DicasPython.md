@@ -10,9 +10,9 @@ Eu estou traduzindo aqui para estudar e na esperança de que outros achem tão �
 ```python
 for i in [0, 1, 2, 3, 4, 5]:
     print (i**2)
-    
+ ```
 ### Melhor
-
+```python
 for i in range(6):
     print (i**2)
 ```
@@ -74,13 +74,13 @@ colors = ['red', 'green', 'blue', 'yellow']
 
 n = min(len(names), len(colors))
 for i in range(n):
-    print names[i], '--->', colors[i]
+    print (names[i], '--->', colors[i])
 ```
 ### Melhor
 
 ```python
 for name, color in zip(names, colors):
-    print name, '--->', color
+    print (name, '--->', color)
 ```
 
 ## Loop em ordem ordenada
@@ -90,11 +90,11 @@ colors = ['red', 'green', 'blue', 'yellow']
 
 # Ordem "frente para trás"
 for color in sorted(colors):
-    print colors
+    print (colors)
 
 # Ordem "trás para frente"
 for color in sorted(colors, reverse=True):
-    print colors
+    print (colors)
 ```
 ## Ordem Personalizada
 
@@ -106,12 +106,15 @@ def compare_length(c1, c2):
     if len(c1) > len(c2): return 1
     return 0
 
-print sorted(colors, cmp=compare_length)
+print (sorted(colors, cmp=compare_length))
 ```
 
 ### Melhor
 
 ```python
-print sorted(colors, key=len)
+print (sorted(colors, key=len))
 ```
+
 O original é lento e desagradável para escrever. Além disso, as funções de comparação não estão mais disponíveis no python 3.
+
+
