@@ -10,20 +10,16 @@ Eu estou traduzindo aqui para estudar e na esperança de que outros achem tão �
 ```python
 for i in [0, 1, 2, 3, 4, 5]:
     print i**2
+    
+### Melhor
 
 for i in range(6):
     print i**2
 ```
-### Melhor
-
-```python
-for i in xrange(6):
-    print i**2
-```
-
-`Xrange` cria um iterador sobre o intervalo produzindo os valores um de cada vez.É muito mais eficiente em termos de memória do que `range`. `Xrange` foi renomeado para`range` em python 3.
+nota: em python 2 use xrange
 
 ## Loop em uma collection
+
 ```python
 colors = ['red', 'green', 'blue', 'yellow']
 
