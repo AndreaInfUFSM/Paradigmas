@@ -9,12 +9,12 @@ Eu estou traduzindo aqui para estudar e na esperança de que outros achem tão �
 
 ```python
 for i in [0, 1, 2, 3, 4, 5]:
-    print i**2
+    print (i**2)
     
 ### Melhor
 
 for i in range(6):
-    print i**2
+    print (i**2)
 ```
 nota: em python 2 use xrange
 
@@ -24,14 +24,14 @@ nota: em python 2 use xrange
 colors = ['red', 'green', 'blue', 'yellow']
 
 for i in range(len(colors)):
-    print colors[i]
+    print (colors[i])
 ```
 
 ### Melhor
 
 ```python
 for color in colors:
-    print color
+    print (color)
 ```
 ## Loop para trás
 
@@ -39,14 +39,14 @@ for color in colors:
 colors = ['red', 'green', 'blue', 'yellow']
 
 for i in range(len(colors)-1, -1, -1):
-    print colors[i]
+    print (colors[i])
 ```
 
 ### Melhor
 
 ```python
 for color in reversed(colors):
-    print color
+    print (color)
 ```  
 ## Loop em uma collection e indices
 
@@ -54,14 +54,14 @@ for color in reversed(colors):
 colors = ['red', 'green', 'blue', 'yellow']
 
 for i in range(len(colors)):
-    print i, '--->', colors[i]
+    print (i, '--->', colors[i])
 ```
 
 ### Melhor
 
 ```python
 for i, color in enumerate(colors):
-    print i, '--->', color
+    print (i, '--->', color)
 ```
 É rápido e bonito e nos evita de seguir os índices individuais e de os incrementar.
 Sempre que você estiver manipulando índices [em uma coleção], você provavelmente está fazendo errado.
@@ -75,20 +75,13 @@ colors = ['red', 'green', 'blue', 'yellow']
 n = min(len(names), len(colors))
 for i in range(n):
     print names[i], '--->', colors[i]
-
-for name, color in zip(names, colors):
-    print name, '--->', color
 ```
-
 ### Melhor
 
 ```python
-for name, color in izip(names, colors):
+for name, color in zip(names, colors):
     print name, '--->', color
 ```
-
-`zip`Cria uma nova lista na memória e ocupada mais memória. `izip` é mais eficiente que`zip`.
-Nota: No python 3 `izip` foi renomeada para`zip` e foi promovida uma built in substuindo o velho`zip`.
 
 ## Loop em ordem ordenada
 
