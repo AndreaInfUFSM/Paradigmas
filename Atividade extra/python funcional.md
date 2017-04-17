@@ -1,3 +1,9 @@
+Créditos ao site [python help](https://pythonhelp.wordpress.com) de onde tirei o conteúdo para meu estudo e estou disponibilizando aqui para que outras pessoas possam usufruir tanto quanto eu.
+
+
+Os exemplos de código e as citações diretas são todas da conversa de Raymond.
+Eu estou traduzindo aqui para estudar e na esperança de que outros achem tão útil como eu achei
+
 ## MAP( ), REDUCE( ), FILTER( ) E LAMBDA
 
 ### Map( )
