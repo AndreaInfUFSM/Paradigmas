@@ -1,4 +1,3 @@
-# Deixando código python mais elegante
 
 Créditos a Raymonf Hettinger's, palestra de pycon 2013,  [video](http://www.youtube.com/watch?feature=player_embedded&v=OSGv2VnC0go)
 
