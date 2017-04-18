@@ -1,5 +1,5 @@
 
-Créditos desse materia a Raymonf Hettinger's, palestra na pycon 2013,  [video](http://www.youtube.com/watch?feature=player_embedded&v=OSGv2VnC0go). 
+Créditos desse material a Raymonf Hettinger's, palestra na pycon 2013,  [video](http://www.youtube.com/watch?feature=player_embedded&v=OSGv2VnC0go). 
 
 Os exemplos de código e as citações diretas são todas da conversa de Raymond citada acima.
 Eu estou traduzindo aqui para estudar e na esperança de que outros achem tão útil como eu achei
